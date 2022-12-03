@@ -3,24 +3,7 @@ import './App.css';
 import React, {useState} from 'react';
 import QuizHeader from './components/QuizHeader'
 import QuizQuestion from './components/QuizQuestions'
-
-const qb={
-  "questions":[
-    {
-      "q":"This is a question one?",
-      "a":"answer a: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque inventore laboriosam voluptatem sunt officiis mollitia.",
-      "b":"answer b: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque inventore laboriosam voluptatem sunt officiis mollitia",
-      "c":"answer c: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque inventore laboriosam voluptatem sunt officiis mollitia",
-      "correct":"a"
-    },
-    {
-      "q":"This is a question two?",
-      "a":"answer a: e inventore laboriosam voluptatem sunt officiis mollitia.",
-      "b":"answer b",
-      "c":"answer c",
-      "correct":"b"
-  },]
-  }
+import qb from './questions.json'
 
 function App() {
   const[state, setState]=useState(0);
@@ -40,5 +23,32 @@ function App() {
     </div>
   );
 }
+
+
+// const qb={
+//   "questions":[
+//       {
+//         "Q":"This is a question one?",
+//         "A":"answer a: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque inventore laboriosam voluptatem sunt officiis mollitia.",
+//         "B":"answer b: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque inventore laboriosam voluptatem sunt officiis mollitia",
+//         "C":"answer c: Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque inventore laboriosam voluptatem sunt officiis mollitia",
+//         "correct":"A"
+//       },
+//       {
+//         "Q":"This is a question two?",
+//         "A":"answer a: e inventore laboriosam voluptatem sunt officiis mollitia.",
+//         "B":"answer b",
+//         "C":"answer c",
+//         "correct":"B"
+//     },
+//     {
+//       "Q":"",
+//       "A":"",
+//       "B":"",
+//       "C":"",
+//       "correct":""
+//   },
+//   ]
+// }
 
 export default App;

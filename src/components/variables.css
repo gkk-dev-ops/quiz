@@ -1,4 +1,15 @@
 :root{
     --background-color: #181A1B;
-    color: azure;
+    --accent-color-1: #0B3F70;
+    --accent-color-2: #61ACF2;
+    --accent-color-3: #1787F0;
+    --accent-color-4: #2D5070;
+    --accent-color-5: #136BBD;
+    
+    /* --background-color: azure;
+    --accent-color-5: #705015;
+    --accent-color-5: #F2C777;
+    --accent-color-5: #F0AC2E;
+    --accent-color-5: #705C37;
+    --accent-color-5: #B88423; */
 }
