@@ -1,18 +1,42 @@
+import './QuizQuestions.css'
 
 export default function QuizQuestion(props) {
     return(
         <div className="quiz-question">
-            <h1>{props.questionBase.questions[0].q}</h1>
-                <ol>
-                    <li>{props.questionBase.questions[0].a}</li>
-                    <li>{props.questionBase.questions[0].b}</li>
-                    <li>{props.questionBase.questions[0].c}</li>
-                    <li>{props.questionBase.questions[0].correct}</li>
-                </ol>
-                <button
+            <div className="question-tile">
+                <h1>
+                    {props.questionBase.questions[props.questionIndex].q}
+                </h1>
+            </div>
+            <div className="answer-tile">
+                {props.questionBase.questions[props.questionIndex].a}
+            </div>
+                
+            <div className="answer-tile">
+                {props.questionBase.questions[props.questionIndex].b}
+            </div>
+                
+            <div className="answer-tile">
+                {props.questionBase.questions[props.questionIndex].c}
+            </div>
+            {/* <div className="answer-tile">
+                {props.questionBase.questions[0].correct}
+            </div> */}
+            <div className="check-answer">
+                <button className='check-answer-button'>Previous</button>
+                <button className="check-answer-button"
                     onClick={() => {props.pointsSetter(props.points+1)}}>
-                     Add point for the correct answer
+                     Check if answer is correct.
                 </button>
+                <button
+                    className='check-answer-button'
+                    onClick={() => {
+                        props.questionIndexSetter(props.questionIndex+1)
+                    }}
+                >
+                    Next
+                </button>
+            </div>
         </div>
         );
   }

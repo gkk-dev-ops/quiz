@@ -1,0 +1,39 @@
+@import "./variables.css";
+
+body{
+    background-color: var(--background-color);
+}
+
+.quiz-question{
+    border: solid 1px rgb(5, 243, 96);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+.question-tile{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: solid 1px rgb(5, 243, 96);
+}
+.answer-tile{
+    height: 150px;
+    width: 150px;
+    padding: 15px;
+    margin: 15px;
+    border: solid 1px rgb(5, 243, 96);
+}
+.check-answer{
+    width: 600px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.check-answer-button{
+    border-radius: 15px;
+    height: 40px;
+}
