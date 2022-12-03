@@ -5,7 +5,6 @@ export default function QuizQuestion(props) {
     const [answerAClass, setAnswerAClass] = useState('');
     const [answerBClass, setAnswerBClass] = useState('');
     const [answerCClass, setAnswerCClass] = useState('');
-    let alreadyAnswered = false;
 
     function resetQuestionState() {
         setAnswerAClass('')
@@ -75,7 +74,8 @@ export default function QuizQuestion(props) {
                     className='check-answer-button'
                     onClick={() => {
                         resetQuestionState()
-                        if (props.questionIndex > 0 && props.questionIndex <= props.questionIndexSetter.length ) {
+                        console.log(props.questionBase.length)
+                        if (props.questionIndex > 0 && props.questionIndex < props.questionBase.length ) {
                             props.questionIndexSetter(props.questionIndex-1)                         
                         }
                     }}
@@ -85,9 +85,17 @@ export default function QuizQuestion(props) {
                 <button
                     className='check-answer-button'
                     onClick={() => {
-                        resetQuestionState()
-                        if (props.questionIndex >= 0 && props.questionIndex < props.questionIndexSetter.length ) {
+                        console.log(props.questionIndex)
+                        console.log(props.questionBase.length-1)
+                        console.log(answerAClass !== '')
+                        console.log(answerBClass !== '')
+                        console.log(answerCClass !== '')
+                        if(props.questionIndex === props.questionBase.length-1 && (answerAClass !== '' || answerBClass !== '' || answerCClass !== '')){
+                            alert(`Congratulations, you've finished with ${Math.round(props.points / props.questionBase.length * 10000)/100}%.`)
+                        }
+                        if (props.questionIndex >= 0 && props.questionIndex < props.questionBase.length-1 ) {
                             props.questionIndexSetter(props.questionIndex+1)                            
+                            resetQuestionState()
                         }
                     }}
                 >

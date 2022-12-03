@@ -12,6 +12,8 @@ function App() {
     <div className="App">
      <QuizHeader
      currentPoints={state}
+     amountOfQuestions={qb.length}
+     questionIndex={questionIndex}
      />
      <QuizQuestion
      questionBase={qb}
