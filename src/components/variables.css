@@ -1,15 +1,35 @@
 :root{
-    --background-color: #181A1B;
+    --correct-answer: green;
+    --wrong-answer: red;
+    --correct-answer-raw: 0, 128, 0;
+    --wrong-answer-raw: 255, 0, 0;
+
     --accent-color-1: #0B3F70;
-    --accent-color-2: #61ACF2;
+    --accent-color-2: #61acf2;
     --accent-color-3: #1787F0;
     --accent-color-4: #2D5070;
-    --accent-color-5: #136BBD;
+    --accent-color-5: #136bbd;
+    --accent-color-1-raw: 11, 63, 112;
+    --accent-color-2-raw: 97, 172, 242;
+    --accent-color-3-raw: 23, 135, 240;
+    --accent-color-4-raw: 45, 80, 112;
+    --accent-color-5-raw: 19, 107, 189;
+    --background-color: rgb(var(--accent-color-2-raw), 0.4);
     
     /* --background-color: azure;
     --accent-color-5: #705015;
     --accent-color-5: #F2C777;
     --accent-color-5: #F0AC2E;
     --accent-color-5: #705C37;
-    --accent-color-5: #B88423; */
+    --accent-color-5: #B88423;
+    --background-color: #181A1B; */
+    
+    background-color: var(--background-color);
+    color: var(--accent-color-1);
+    font-size: 1.5em;
+}
+
+button{
+    font-size: 1em;
+    color: #FFF;
 }

@@ -1,53 +1,43 @@
 @import "./variables.css";
 
 body{
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
 }
 
 .quiz-question{
-    display: grid;
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    justify-items: center;
-}
-
-.question-tile{
-    grid-column-start: 1;
-    grid-column-end: 4;
+    margin: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column-reverse;
 }
 
 .answer-tile{
-    height: 150px;
-    width: 300px;
-    padding: 15px;
-    margin: 30px;
-    border-radius: 15px;
-    border: solid 1px rgb(5, 243, 96);
+    width: 60vw;
+    padding: 0.9em;
+    margin: 2em;
+    border-radius: 1em;
+    border: solid 1px var(--accent-color-2);
 }
 .check-answer{
-    width: 600px;
     display: flex;
     align-items: center;
-    height: 50px;
-    grid-column-start: 1;
-    grid-column-end: 4;
+    height: 3em;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .check-answer-button{
-    border-radius: 15px;
-    height: 40px;
-    width: 200px;
-}
-
-.current-answer{
-    background-color: lightblue;
+    border-radius: 1em;
+    height: 2em;
+    width: 12.5em;
+    background-color: var(--accent-color-2);
 }
 
 .correct-answer{
-    background-color: green;
+    background-color: rgb(var(--correct-answer-raw), 0.5);
 }
 
 .wrong-answer{
-    background-color: red;
+    background-color: rgb(var(--wrong-answer-raw), 0.5);
 }
