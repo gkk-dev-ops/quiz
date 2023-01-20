@@ -4,7 +4,6 @@ import Masthead from '../Masthead/Masthead'
 import Questions from '../Questions/Questions'
 import axios from 'axios'
 
-const QUESTIONS_DB_URL = 'http://localhost:3001'
 
 function App() {
   const [questionsDB, setQuestionsDB] = useState(null)
@@ -16,7 +15,7 @@ function App() {
   }, [questionIndex]);
 
   async function getQuestions(){
-    axios.get(`${QUESTIONS_DB_URL}/gunPermit`).then(res => {
+    axios.get(`${process.env.REACT_APP_QUESTIONS_DB_URL}/gunPermit`).then(res => {
       setQuestionsDB(res.data);
     })
   }
