@@ -1,8 +1,4 @@
-@import "./variables.css";
-
-body{
-    /* background-color: var(--background-color); */
-}
+@import "../../styles/variables.css";
 
 .quiz-question{
     margin: 1em;
@@ -18,6 +14,12 @@ body{
     margin: 2em;
     border-radius: 1em;
     border: solid 1px var(--accent-color-2);
+    cursor: pointer;
+}
+
+.answer-tile:hover{
+    box-shadow: 2px;
+    color: var(--accent-color-3);
 }
 
 .check-answer-button{

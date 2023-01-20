@@ -16,20 +16,17 @@
     --accent-color-5-raw: 19, 107, 189;
     --background-color: rgb(var(--accent-color-2-raw), 0.4);
     
-    /* --background-color: azure;
-    --accent-color-5: #705015;
-    --accent-color-5: #F2C777;
-    --accent-color-5: #F0AC2E;
-    --accent-color-5: #705C37;
-    --accent-color-5: #B88423;
-    --background-color: #181A1B; */
+    --alt-background-color: azure;
+    --alt-accent-color-5: #705015;
+    --alt-accent-color-5: #F2C777;
+    --alt-accent-color-5: #F0AC2E;
+    --alt-accent-color-5: #705C37;
+    --alt-accent-color-5: #B88423;
+    --alt-background-color: #181A1B;
     
     background-color: var(--background-color);
     color: var(--accent-color-1);
     font-size: 1.5em;
 }
 
-button{
-    font-size: 1em;
-    color: #FFF;
-}
+button{ font-size: 1em; color: #FFF; cursor: pointer;}

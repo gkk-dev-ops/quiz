@@ -15,9 +15,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-backend": "json-server --watch db/questions.json --port=3001",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [

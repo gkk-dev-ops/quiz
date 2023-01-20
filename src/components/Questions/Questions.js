@@ -1,7 +1,7 @@
-import './QuizQuestions.css'
+import './Questions.css'
 import React, {useState} from 'react';
 
-export default function QuizQuestion(props) {
+export default function Questions(props) {
     const [answerAClass, setAnswerAClass] = useState('');
     const [answerBClass, setAnswerBClass] = useState('');
     const [answerCClass, setAnswerCClass] = useState('');
@@ -16,9 +16,9 @@ export default function QuizQuestion(props) {
         <div className="quiz-question">
             <div className="quiz-tiles">
                 <div className="question-tile">
-                    <h1>
-                        {props.questionBase[props.questionIndex].q}
-                    </h1>
+                    <h2>
+                        {props.questionBase[props.questionIndex].Q}
+                    </h2>
                 </div>
                 <div
                     className={`answer-tile ${answerAClass}`}
@@ -74,7 +74,6 @@ export default function QuizQuestion(props) {
                     className='check-answer-button'
                     onClick={() => {
                         resetQuestionState()
-                        console.log(props.questionBase.length)
                         if (props.questionIndex > 0 && props.questionIndex < props.questionBase.length ) {
                             props.questionIndexSetter(props.questionIndex-1)                         
                         }
@@ -85,11 +84,6 @@ export default function QuizQuestion(props) {
                 <button
                     className='check-answer-button'
                     onClick={() => {
-                        console.log(props.questionIndex)
-                        console.log(props.questionBase.length-1)
-                        console.log(answerAClass !== '')
-                        console.log(answerBClass !== '')
-                        console.log(answerCClass !== '')
                         if(props.questionIndex === props.questionBase.length-1 && (answerAClass !== '' || answerBClass !== '' || answerCClass !== '')){
                             alert(`Congratulations, you've finished with ${Math.round(props.points / props.questionBase.length * 10000)/100}%.`)
                         }

@@ -1,12 +1,11 @@
-// import logo from './logo.svg';
 import './App.css';
 import React, {useState} from 'react';
-import QuizHeader from './components/QuizHeader'
-import QuizQuestion from './components/QuizQuestions'
+import Masthead from '../Masthead/Masthead'
+import Questions from '../Questions/Questions'
 
-import qb from './questions.json'
+import qb from '../../questions.json'
 
-const QUESTIONS_DB_URL = 'http://localhost:3000'
+const QUESTIONS_DB_URL = 'http://localhost:3001'
 
 function App() {
 
@@ -15,12 +14,12 @@ function App() {
   
   return (
     <div className="App">
-      <QuizHeader
+      <Masthead
       currentPoints={state}
       amountOfQuestions={qb.length}
       questionIndex={questionIndex}
       />
-      <QuizQuestion
+      <Questions
       questionBase={qb}
       questionIndex={questionIndex}
       questionIndexSetter={questionIndexSetter}

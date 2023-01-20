@@ -1,6 +1,6 @@
-import './QuizHeader.css';
+import './Masthead.css';
 
-export default function QuizHeader(props) {
+export default function Masthead(props) {
     return(
       <div className='quiz-banner'>
           <h1>Welcome to gun permit quiz!</h1>
