@@ -12,6 +12,18 @@ export default function Questions(props) {
         setAnswerCClass('')
     }
 
+    function handleAnswerChecking(handleeLetter, handleeSetter){
+        if (answerAClass === '' && answerBClass === '' && answerCClass === ''){
+            resetQuestionState()
+            if(props.questionBase[props.questionIndex].correct === handleeLetter){
+                handleeSetter("correct-answer");
+                props.pointsSetter(props.points+1);
+            }else{
+                handleeSetter("wrong-answer")
+            }
+        }
+    }
+
     return(
         <div className="quiz-question">
             <div className="quiz-tiles">
@@ -23,15 +35,7 @@ export default function Questions(props) {
                 <div
                     className={`answer-tile ${answerAClass}`}
                     onClick={() => {
-                        if (answerAClass === '' && answerBClass === '' && answerCClass === ''){
-                            resetQuestionState()
-                            if(props.questionBase[props.questionIndex].correct === 'A'){
-                                setAnswerAClass("correct-answer");
-                                props.pointsSetter(props.points+1);
-                            }else{
-                                setAnswerAClass("wrong-answer")
-                            }
-                        }
+                        handleAnswerChecking('A', setAnswerAClass)
                     }}
                     >
                     {props.questionBase[props.questionIndex].A}
@@ -39,15 +43,7 @@ export default function Questions(props) {
                 <div
                     className={`answer-tile ${answerBClass}`}
                     onClick={() => {
-                        if (answerAClass === '' && answerBClass === '' && answerCClass === ''){
-                            resetQuestionState()
-                            if(props.questionBase[props.questionIndex].correct === 'B'){
-                                setAnswerBClass("correct-answer")
-                                props.pointsSetter(props.points+1)
-                            }else{
-                                setAnswerBClass("wrong-answer")
-                            }
-                        }
+                        handleAnswerChecking('B', setAnswerBClass)
                     }}>
                     {props.questionBase[props.questionIndex].B}
                 </div>
@@ -55,15 +51,7 @@ export default function Questions(props) {
                 <div
                 className={`answer-tile ${answerCClass}`}
                 onClick={() => {
-                    if (answerAClass === '' && answerBClass === '' && answerCClass === ''){
-                        resetQuestionState()
-                        if(props.questionBase[props.questionIndex].correct === 'C'){
-                            setAnswerCClass("correct-answer")
-                            props.pointsSetter(props.points+1)
-                        }else{
-                            setAnswerCClass("wrong-answer")
-                        }                        
-                    }
+                    handleAnswerChecking('C', setAnswerCClass)
                 }}
                 >
                     {props.questionBase[props.questionIndex].C}
