@@ -1,4 +1,4 @@
-@import "../../styles/variables.css";
+@import "../../styles/variables.scss";
 
 .quiz-question{
     margin: 1em;
@@ -15,11 +15,11 @@
     border-radius: 1em;
     border: solid 1px var(--accent-color-2);
     cursor: pointer;
-}
-
-.answer-tile:hover{
-    box-shadow: 2px;
-    color: var(--accent-color-3);
+    
+    &:hover{
+        box-shadow: 2px;
+        color: var(--accent-color-3);
+    }
 }
 
 .check-answer-button{

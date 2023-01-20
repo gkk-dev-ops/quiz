@@ -1,4 +1,4 @@
-import './Masthead.css';
+import './Masthead.scss';
 
 export default function Masthead(props) {
     return(
