@@ -21,7 +21,11 @@ function App() {
   }
 
   if(!questionsDB){
-    return <p>Loading questions...</p>
+    return (
+        <div className="loading">
+          <p>Loading questions...</p>
+        </div>
+    );
   }else{
     return (
       <div className="App">
