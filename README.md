@@ -12,3 +12,9 @@ npm run start-backend
 # and app itself localhost:3000
 npm start
 ```
+
+## Maintenance
+
+All app issues are stored in `TODO` file in repo. GH issues, improvements ideas, when accepted should be moved there.
+
+All issues marked `TODO`, concerning specific code parts should be moved to `TODO > Specific`.

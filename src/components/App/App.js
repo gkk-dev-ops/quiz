@@ -1,50 +1,18 @@
-import './App.scss';
-import React, {useState, useEffect} from 'react';
-import Masthead from '../Masthead/Masthead'
-import Questions from '../Questions/Questions'
-import axios from 'axios'
-
+import { Routes, Route } from "react-router-dom"
+import Home from "../../views/Home/Home"
+import About from "../../views/About/About"
+import Editor from "../../views/Editor/Editor"
 
 function App() {
-  const [questionsDB, setQuestionsDB] = useState(null)
-  const[state, setState]=useState(0);
-  const[questionIndex, questionIndexSetter]=useState(0);
-
-  useEffect(() => {
-    getQuestions()
-  }, [questionIndex]);
-
-  async function getQuestions(){
-    axios.get(`${process.env.REACT_APP_QUESTIONS_DB_URL}/gunPermit`).then(res => {
-      setQuestionsDB(res.data);
-    })
-  }
-
-  if(!questionsDB){
-    return (
-        <div className="loading">
-          <p>Loading questions...</p>
-        </div>
-    );
-  }else{
-    return (
-      <div className="App">
-        <Masthead
-        currentPoints={state}
-        amountOfQuestions={questionsDB.length}
-        questionIndex={questionIndex}
-        />
-
-        <Questions
-        questionBase={questionsDB}
-        questionIndex={questionIndex}
-        questionIndexSetter={questionIndexSetter}
-        points={state}
-        pointsSetter={setState}
-        />
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="about" element={ <About/> } />
+        <Route path="editor" element={ <Editor/> } />
+      </Routes>
+    </div>
+  )
 }
 
 export default App;
