@@ -69,6 +69,9 @@ export default function Questions(props) {
                 >
                     ⬅️ Previous
                 </button>
+                <button className='check-answer-button'>
+                    Modify Questions
+                </button>
                 <button
                     className='check-answer-button'
                     onClick={() => {

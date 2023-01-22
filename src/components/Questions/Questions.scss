@@ -22,12 +22,28 @@
     }
 }
 
+.check-answer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+    margin-bottom: 0.5em;
+    width: 100%;
+}
+
 .check-answer-button{
-    margin: 0 2em;
+    font-size: medium;
     border-radius: 1em;
+    border: 1px solid var(--accent-color-3);
     height: 2em;
-    width: 12.5em;
+    min-width: 6.5em;
     background-color: var(--accent-color-2);
+    &:active{
+        background-color: var(--accent-color-3);
+        box-shadow: 1em var(--accent-color-2);
+        border: none;
+    }
+    
 }
 
 .correct-answer{

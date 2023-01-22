@@ -5,7 +5,12 @@
 }
 
 .header-numbers-wrapper{
+    padding-top: 1em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+.quiz-banner{
+    padding: 1em;
 }
