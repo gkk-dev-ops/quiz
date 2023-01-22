@@ -1,17 +1,17 @@
 @import "../../styles/variables.scss";
 
 .quiz-question{
-    margin: 1em;
+    margin: 1em 1em 1em 1em;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .answer-tile{
     width: 30em;
     padding: 0.9em;
-    margin: 2em;
+    margin: auto 2em;
     border-radius: 1em;
     border: solid 1px var(--accent-color-2);
     cursor: pointer;
@@ -26,16 +26,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 1em;
-    margin-bottom: 0.5em;
+    gap: 0.5em;
+    margin-bottom: 0.25em;
     width: 100%;
 }
 
 .check-answer-button{
-    font-size: medium;
+    font-size: xx-large;
     border-radius: 1em;
     border: 1px solid var(--accent-color-3);
-    height: 2em;
+    height: 4.5em;
+    width: 50%;
     min-width: 6.5em;
     background-color: var(--accent-color-2);
     &:active{
@@ -52,4 +53,11 @@
 
 .wrong-answer{
     background-color: rgb(var(--wrong-answer-raw), 0.5);
+}
+
+.quiz-tiles{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 1em;
 }

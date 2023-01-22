@@ -67,10 +67,7 @@ export default function Questions(props) {
                         }
                     }}
                 >
-                    ⬅️ Previous
-                </button>
-                <button className='check-answer-button'>
-                    Modify Questions
+                    ⬅️
                 </button>
                 <button
                     className='check-answer-button'
@@ -84,7 +81,7 @@ export default function Questions(props) {
                         }
                     }}
                 >
-                    Next ➡️ 
+                 ➡️ 
                 </button>
             </div>
         </div>
