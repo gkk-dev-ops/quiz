@@ -1,6 +1,6 @@
 # TODO
 ## General
-- [] Github issues: Shuffle questions [#6](https://github.com/gkk-dev-ops/quiz/issues/6)
+- [ ] Github issues: Shuffle questions [#6](https://github.com/gkk-dev-ops/quiz/issues/6)
 - [ ] Github issues: Infinitive points loop [#1](https://github.com/gkk-dev-ops/quiz/issues/1)
 - [ ] Mark correct and incorrect answer so it's possible to learn from the mistakes
 - [ ] Add [i18s](https://www.codeandweb.com/babeledit/tutorials/how-to-translate-your-react-app-with-react-i18next)
