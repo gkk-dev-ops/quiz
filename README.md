@@ -4,7 +4,7 @@ React quiz webapp (questions and answers in polish). Questsions can be easilly s
 
 ## Running
 
-To start the app (default), change `.env.example` to `.env` run both:
+To start the app:
 
 ```bash
 # start json-server backend localhost:3001
