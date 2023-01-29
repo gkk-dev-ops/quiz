@@ -16,12 +16,12 @@ function Home() {
     }, [questionIndex]);
   
     async function getQuestions(){
-      axios.get(`${process.env.REACT_APP_QUESTIONS_DB_URL}/gunPermit`).then(res => {
-        setQuestionsDB(res.data);
-      }).catch(err => {
-        console.error("Couldn't get questions", err);
-        setQuestionsDB(backupQuestions.gunPermit);
-      })
+      // axios.get(`${process.env.REACT_APP_QUESTIONS_DB_URL}/gunPermit`).then(res => {
+      //   setQuestionsDB(res.data);
+      // }).catch(err => {
+      // console.error("Couldn't get questions", err);
+      setQuestionsDB(backupQuestions.gunPermit);
+      // })
     }
   
     if(!questionsDB){
