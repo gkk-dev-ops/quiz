@@ -11,7 +11,7 @@
 .answer-tile{
     width: 30em;
     padding: 0.9em;
-    margin: auto 2em;
+    margin: 0 2em;
     border-radius: 1em;
     border: solid 1px var(--accent-color-2);
     cursor: pointer;
@@ -23,20 +23,21 @@
 }
 
 .check-answer{
+    bottom: 0.25em;
+    position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 0.5em;
-    margin-bottom: 0.25em;
     width: 100%;
 }
 
 .check-answer-button{
-    font-size: xx-large;
+    font-size: 64px;
     border-radius: 1em;
     border: 1px solid var(--accent-color-3);
-    height: 4.5em;
-    width: 50%;
+    height: 1.5em;
+    width: 35%;
     min-width: 6.5em;
     background-color: var(--accent-color-2);
     &:active{
@@ -59,4 +60,5 @@
     flex-direction: column;
     gap: 1em;
     margin-bottom: 1em;
+    min-height: 100vh;
 }
