@@ -3,6 +3,7 @@ import axios from 'axios'
 import Masthead from '../../components/Masthead/Masthead'
 import Questions from '../../components/Questions/Questions'
 import Navbar from '../../components/Navbar/Navbar';
+import backupQuestions from '../../backup/questionsRollback.json'
 import './Home.scss';
 
 function Home() {
@@ -17,6 +18,9 @@ function Home() {
     async function getQuestions(){
       axios.get(`${process.env.REACT_APP_QUESTIONS_DB_URL}/gunPermit`).then(res => {
         setQuestionsDB(res.data);
+      }).catch(err => {
+        console.error("Couldn't get questions", err);
+        setQuestionsDB(backupQuestions.gunPermit);
       })
     }
   
